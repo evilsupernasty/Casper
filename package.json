@@ -1,7 +1,6 @@
 {
-    "name": "casper",
+    "name": "slimer",
     "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "demo": "https://demo.ghost.io",
     "version": "2.0.1",
     "engines": {
         "ghost": ">=1.0.0"
@@ -12,9 +11,9 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "author": {
-        "name": "Ghost Foundation",
-        "email": "hello@ghost.org",
-        "url": "https://ghost.org"
+        "name": "Greg Parsons",
+        "email": "greg@bang.net.nz",
+        "url": "https://bang.net.nz"
     },
     "gpm": {
         "type": "theme",
@@ -29,10 +28,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/TryGhost/Casper.git"
+        "url": "https://github.com/evilsupernasty/Slimer"
     },
-    "bugs": "https://github.com/TryGhost/Casper/issues",
-    "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
+    "bugs": "https://github.com/evilsupernasty/Slimer/issues",
+    "contributors": "https://github.com/evilsupernasty/Slimer/graphs/contributors",
     "devDependencies": {
         "autoprefixer": "6.3.6",
         "cssnano": "3.7.1",
