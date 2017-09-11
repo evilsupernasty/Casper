@@ -10,6 +10,7 @@ production stylesheet in assets/built/screen.css
 4.  Site Header
 5.  Site Navigation
 6.  Post Feed
+  6.1. Pagination
 7.  Single Post
   7.1. Subscribe Form
   7.2. Post Footer
@@ -513,6 +514,39 @@ The first (most recent) post in the list is styled to be bigger than the others 
     .post-card {
         margin: 0 20px 5vw;
     }
+}
+
+/* 6.1. Pagination
+/* ---------------------------------------------------------- */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.newer-posts,
+.older-posts {
+    display: block;
+    padding: 9px 16px;
+    border: color(var(--midgrey) l(+20%)) 1px solid;
+    color: var(--midgrey);
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all ease 0.2s;
+}
+
+.newer-posts:hover,
+.older-posts:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.page-number {
+    margin: 0 1em;
 }
 
 
