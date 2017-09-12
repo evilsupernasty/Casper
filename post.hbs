@@ -45,6 +45,14 @@ into the {body} of the default.hbs template --}}
             </section>
             {{/if}}
 
+            {{!-- List of post tags --}}
+            {{#if tags}}
+            <section class="post-tags">
+                <h4>Tags</h4>
+                {{tags separator=" &bull; "}}
+            </section>
+            {{/if}}
+
             <footer class="post-full-footer">
                 {{!-- Everything inside the #author tags pulls data from the author --}}
                 {{#author}}

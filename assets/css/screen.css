@@ -17,6 +17,7 @@ production stylesheet in assets/built/screen.css
   7.3. Comments
   7.4. Related Posts
   7.5. Floating Header
+  7.6. Post Tags
 8.  Author Template
 9.  Error Template
 10. Subscribe Overlay
@@ -299,6 +300,10 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link-fb svg {
     height: 1.5rem;
+}
+
+.social-link-in svg {
+    width: 1.8rem;
 }
 
 .social-link-wb svg {
@@ -1517,6 +1522,16 @@ Super neat trick courtesy of @JoelDrapper
         display: none;
     }
 }
+
+
+/* 7.6. Post Tags
+/* ---------------------------------------------------------- */
+
+.post-tags {
+    margin: 0 auto;
+    max-width: 840px;
+}
+
 
 
 /* 8. Author Template
