@@ -22,6 +22,9 @@ production stylesheet in assets/built/screen.css
 9.  Error Template
 10. Subscribe Overlay
 11. Site Footer
+12. Search
+  12.1. Search Form
+  12.2. Search Result
 
 */
 
@@ -48,6 +51,18 @@ body {
     position: absolute;
     text-indent: -9999px;
 }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+  }
 
 
 /* 2. Layout - Page building blocks
@@ -345,6 +360,21 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .rss-button svg {
     margin-bottom: 1px;
     height: 2.1rem;
+    fill: #fff;
+}
+
+.search-anchor {
+    opacity: 0.8;
+    padding-left: 20px;
+}
+
+.rsearch-anchor:hover {
+    opacity: 1;
+}
+
+.search-anchor svg {
+    margin-bottom: 1px;
+    height: 1.75rem;
     fill: #fff;
 }
 
@@ -1871,5 +1901,110 @@ Super neat trick courtesy of @JoelDrapper
     }
     .site-footer-nav a:first-child {
         margin-left: 0;
+    }
+}
+
+
+/* 12. Search
+/* ---------------------------------------------------------- */
+
+/* 12.1. Search Form
+/* ---------------------------------------------------------- */
+
+.site-search-section {
+    background-color: color(var(--midgrey) a(25%));
+    padding-top: 40px;
+}
+
+.site-search-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 420px;
+}
+
+.site-search-section .form-group {
+    flex-grow: 1;
+}
+
+.site-search-input {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: color(var(--lightgrey) l(+7%)) 1px solid;
+    color: var(--midgrey);
+    font-size: 1.8rem;
+    line-height: 1em;
+    font-weight: normal;
+    user-select: text;
+    border-radius: 5px;
+    transition: border-color 0.15s linear;
+
+    -webkit-appearance: none;
+}
+
+.site-search-input:focus {
+    outline: 0;
+    border-color: color(var(--lightgrey) l(-2%));
+}
+
+.site-search-section button {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    padding: 0 20px;
+    height: 41px;
+    outline: none;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 37px;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+    background: linear-gradient(
+    color(var(--blue) whiteness(+7%)),
+    color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
+    color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
+    color(var(--blue) lightness(-4%) saturation(-10%))
+    );
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px inset rgba(0,0,0,0.14);
+
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.site-search-section button:active,
+.site-search-section button:focus {
+    background: color(var(--blue) lightness(-9%) saturation(-10%));
+}
+
+.site-search-results {
+    position: relative;
+    z-index: 200;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    padding: 40px 0 0 0;
+}
+
+.site-search-results .post-card {
+    min-height: 0;
+}
+
+.search-result-title {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    .site-search-section form {
+        flex-direction: column;
+    }
+    .site-search-section .form-group {
+        width: 100%;
+    }
+    .site-search-section button {
+        width: 100%;
+        margin: 10px 0 0 0;
     }
 }

@@ -25,6 +25,22 @@
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         {{{body}}}
 
+        {{!-- Search section --}}
+        <section class="site-search-section">
+            <form class="site-search-form" action="#">
+                <div class="form-group">
+                    <label for="site-search-input" class="sr-only">Search Six Noises</label>
+                    <input class="site-search-input" type="text" name="site-search-input" id="site-search-input" placeholder="search Six Noises...">
+                </div>
+                <button class="" type="submit"><span>Search</span></button>
+            </form>
+            <div class="outer">
+                <div class="inner">
+                    <section class="site-search-results"></section>
+                </div>
+            </div>
+        </section>
+
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
@@ -62,6 +78,12 @@
         crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
+    <script type="text/javascript">
+        $('.site-search-input').ghostHunter({
+            results: ".site-search-results"
+        });
+    </script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
