@@ -1014,6 +1014,18 @@ Super neat trick courtesy of @JoelDrapper
     }
 }
 
+/* figure/figcaption styling */
+.post-full-content figure img {
+    margin-bottom: 0;
+}
+
+.post-full-content figcaption {
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
 
 
 /* 7.1. Subscribe Form
